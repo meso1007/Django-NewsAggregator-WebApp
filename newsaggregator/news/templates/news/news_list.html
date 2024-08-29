@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <body>
+    <header>
+        <div class="mainnav">
+          <a href="#" id="active">Home</a>
+          <a href="#" disabled>Contacts</a>
+          <a href="#" disabled>Info</a>
+        </div>
+        <button class="login">Login</button>
+    </header>
+    <div class="carousel">
+      <div class="list">
+        {% for news in news_data %}
+        <div class="item">
+          <img src="{{news.image}}" />
+          <div class="content">
+            <div class="date">{{ news.date }}</div>
+            <div class="title">LATEST NEWS</div>
+            <div class="topic">{{ news.title }}</div>
+            <div class="des">{{ news.des }}</div>
+            <div class="buttons">
+              <button>
+                <a href="{{ news.link }}">SEE MORE</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="thumbnail">
+        {% for news in reversed_news_data %}
+        <div class="item">
+          <img src="{{news.image}}" />
+          <div class="content">
+            <!-- <div class="title">{{news.title}}</div> -->
+            <div class="des">{{news.date}}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- Arrow -->
+      <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+      <div class="time"></div>
+    </div>
+  </body>
+  <script src="../../static/app.js"></script>
+</html>
