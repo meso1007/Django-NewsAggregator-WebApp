@@ -2,6 +2,11 @@
 
 This project is a news carousel application that fetches the latest headlines from BBC News and displays them in a stylish and interactive carousel format. It uses Python for web scraping, HTML for structure, CSS for styling, and JavaScript for functionality.
 
+## Preview
+
+![](./screenshot1.jpg)
+![](./screenshot2.jpg)
+
 ## Features
 
 - **Fetch Latest News:** Scrapes the latest headlines from the BBC News homepage.
