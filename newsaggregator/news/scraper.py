@@ -82,4 +82,4 @@ def get_article_date(article_url):
     if time_tags:
         return time_tags[0].get_text(strip=True)
     
-    return 'Date not found'
+    return ''

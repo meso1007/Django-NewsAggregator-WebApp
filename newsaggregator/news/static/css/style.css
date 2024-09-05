@@ -5,6 +5,8 @@ body {
     color: #eee;
     margin: 0;
     font-size: 12px;
+    user-select: none;
+
 }
 a{
     text-decoration: none;
@@ -34,6 +36,16 @@ header a:hover{
 }
 #active{
     color: #ff5733;
+}
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#current-time {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 .login{
     margin-right: 5vw;
@@ -115,18 +127,21 @@ header a:hover{
     gap: 5px;
     margin-top: 20px;
 }
-.carousel .list .item .content button {
+.carousel .list .item .content .buttons .button {
     border: none;
     background-color: #eee;
     letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
+    cursor: pointer;
 }
 .carousel .list .item .content button:hover{
     background-color: #ff5733;
+    cursor: pointer;
 }
 .carousel .list .item .content button a {
     color: #000;
+    font-weight: 500;
 }
 .carousel .list .item .content button:hover a{
     color: #eee;
@@ -343,6 +358,9 @@ header a:hover{
     }
 }
 @media screen and (max-width:678px) {
+    .mainnav{
+        display: none;
+    }
     .carousel .list .item .content .title,
     .carousel .list .item .content .topic {
         font-size: 3em;
